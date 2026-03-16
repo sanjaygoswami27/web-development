@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sanjay Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#83ce9c;
+color:#17343d;
+transition:0.3s;
+}
+
+/* Dark Mode */
+
+.dark{
+background:#614242;
+color:rgb(104, 100, 100);
+}
+
+/* Header */
+
+header{
+background:#cfe4cf;
+color:rgb(52, 46, 102);
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:rgba(20, 57, 126, 0.884);
+text-decoration:none;
+margin:0 12px;
+font-size:16px;
+}
+
+nav a:hover{
+color:#00bcd4;
+}
+
+/* Button */
+
+.toggle-btn{
+background:#00bcd4;
+border:none;
+padding:7px 14px;
+color:white;
+border-radius:4px;
+cursor:pointer;
+}
+
+/* Sections */
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+#home{
+background:white;
+}
+
+.dark #home{
+background:#1e1e1e;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+/* Form */
+
+form{
+max-width:400px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.dark form{
+background:#686161;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+button.submit-btn{
+background:#333;
+color:white;
+padding:10px;
+border:none;
+width:100%;
+border-radius:4px;
+cursor:pointer;
+}
+
+button.submit-btn:hover{
+background:#00bcd4;
+}
+
+.error{
+color:red;
+font-size:14px;
+text-align:left;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h2>Portfolio</h2>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button class="toggle-btn" onclick="toggleDark()">Dark</button>
+
+</header>
+
+<section id="home">
+
+<h1>Welcome</h1>
+<p> to my portfolio website</p>
+
+</section>
+
+<section id="about">
+
+<h2>About Me</h2>
+<p>I am learning Web Development and building projects.</p>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Enter your name">
+<div class="error" id="nameError"></div>
+
+<input type="email" id="email" placeholder="Enter your email">
+<div class="error" id="emailError"></div>
+
+<textarea id="message" placeholder="Your message"></textarea>
+<div class="error" id="messageError"></div>
+
+<button class="submit-btn">Send Message</button>
+
+</form>
+
+</section>
+
+<script>
+
+/* Dark Mode */
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+
+/* Form Validation */
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+
+let valid=true;
+
+document.getElementById("nameError").innerText="";
+document.getElementById("emailError").innerText="";
+document.getElementById("messageError").innerText="";
+
+if(name===""){
+document.getElementById("nameError").innerText="Please enter name";
+valid=false;
+}
+
+if(email===""){
+document.getElementById("emailError").innerText="Please enter email";
+valid=false;
+}
+
+if(message===""){
+document.getElementById("messageError").innerText="Please enter message";
+valid=false;
+}
+
+if(valid){
+alert("Form Submitted Successfully");
+}
+
+});
+
+</script>
+
+</body>
+</html>
