@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjay Portfolio</title>
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+/* Body */
+
+body{
+background:#f4f6ff;
+color:#333;
+line-height:1.6;
+}
+
+/* Header */
+
+.header{
+background:#222;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.logo span{
+color:#4fc3f7;
+}
+
+/* Navbar */
+
+.navbar{
+display:flex;
+gap:20px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:15px;
+}
+
+.navbar a:hover{
+color:#4fc3f7;
+}
+
+/* Hero */
+
+.hero{
+text-align:center;
+padding:70px 20px;
+background:#dbeafe;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:10px;
+color:#0d47a1;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* About */
+
+.about{
+padding:50px 20px;
+text-align:center;
+background:white;
+}
+
+.about h2{
+margin-bottom:15px;
+}
+
+/* Skills */
+
+.skills{
+padding:50px 20px;
+text-align:center;
+background:#e8f5e9;
+}
+
+.skill-container{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.skill{
+background:#333;
+color:white;
+padding:10px 20px;
+border-radius:5px;
+transition:0.3s;
+}
+
+.skill:hover{
+background:#4fc3f7;
+}
+
+/* Projects */
+
+.projects{
+padding:50px 20px;
+background:#fff3e0;
+}
+
+.projects h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.project-card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+}
+
+/* Contact */
+
+.contact{
+padding:50px 20px;
+text-align:center;
+background:#fce4ec;
+}
+
+.contact p{
+margin:5px 0;
+font-size:16px;
+}
+
+.contact a{
+color:#0d47a1;
+text-decoration:none;
+}
+
+.contact input,
+.contact textarea{
+width:80%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.contact button{
+padding:10px 25px;
+background:#333;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.contact button:hover{
+background:#4fc3f7;
+}
+
+/* Footer */
+
+.footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* Tablet */
+
+@media(max-width:900px){
+
+.project-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.header{
+flex-direction:column;
+gap:10px;
+}
+
+.navbar{
+flex-direction:column;
+align-items:center;
+}
+
+.project-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<div class="header">
+
+<div class="logo">Sanjay <span>Portfolio</span></div>
+
+<div class="navbar">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Skills</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<h1>I am Sanjay</h1>
+
+<p>Aspiring Web Developer | HTML | CSS | Responsive Design</p>
+
+</section>
+
+<!-- About -->
+
+<section class="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a web development learner who enjoys creating responsive websites using
+HTML, CSS, Flexbox and Grid. I am improving my skills by building projects
+and learning modern web technologies.
+</p>
+
+</section>
+
+<!-- Skills -->
+
+<section class="skills">
+
+<h2>Skills</h2>
+
+<div class="skill-container">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">Flexbox</div>
+<div class="skill">CSS Grid</div>
+<div class="skill">Responsive Design</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section class="projects">
+
+<h2>Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Responsive personal portfolio website.</p>
+</div>
+
+<div class="project-card">
+<h3>Landing Page</h3>
+<p>Modern landing page using Flexbox.</p>
+</div>
+
+<div class="project-card">
+<h3>Blog Layout</h3>
+<p>Blog layout created with CSS Grid.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section class="contact">
+
+<h2>Contact Me</h2>
+
+<p><b>Name:</b> Sanjay Goswami</p>
+
+<p><b>Phone:</b> <a href="tel:+917772862754">+91 7772862754</a></p>
+
+<p><b>Email:</b> <a href="mailto:sanjayp.bca2025@ssism.org">sanjayp.bca2025@ssism.org</a></p>
+
+<br>
+
+  
+
+</section>
+
+<!-- Footer -->
+
+<div class="footer">
+
+<p>© 2026 Sanjay Portfolio</p>
+
+</div>
+
+</body>
+</html>
